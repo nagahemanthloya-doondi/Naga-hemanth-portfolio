@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOONDI | L Naga Hemanth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Work Sans', 'sans-serif'],
+              mono: ['Space Mono', 'monospace'],
+            },
+            colors: {
+              'brand-accent': {
+                light: '#FFFF00', // Bright Yellow
+                dark: '#FFFF00',
+              },
+              'brand-bg': {
+                light: '#F5F5F5',
+                dark: '#111111',
+              },
+              'brand-text': {
+                light: '#111111',
+                dark: '#F5F5F5',
+              }
+            },
+            boxShadow: {
+              'neo-light': '4px 4px 0px #111111',
+              'neo-dark': '4px 4px 0px #FFFF00',
+              'neo-light-lg': '8px 8px 0px #111111',
+              'neo-dark-lg': '8px 8px 0px #FFFF00',
+            }
+          },
+        }
+      }
+    </script>
+    <style>
+      .scroll-reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .scroll-reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .scroll-reveal, .transition-all, .transition, .transform {
+          transition: none !important;
+          animation: none !important;
+          transform: none !important;
+        }
+      }
+      /* Custom Cursor: hide default cursor */
+      .custom-cursor-area, .custom-cursor-area a, .custom-cursor-area button, .custom-cursor-area [role="button"] {
+        cursor: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
